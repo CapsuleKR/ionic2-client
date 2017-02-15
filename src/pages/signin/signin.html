@@ -1,0 +1,32 @@
+<!--
+  Generated template for the Signin page.
+
+  See http://ionicframework.com/docs/v2/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+  <ion-navbar>
+    <ion-buttons start>
+      <button ion-button icon-only color="dark" (click)="closePage()">
+        <ion-icon name="close"></ion-icon>
+      </button>
+    </ion-buttons>
+    <ion-title>로그인</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+<ion-content padding>
+  <img class="main-logo" src="../assets/images/primary-logo.png">
+  <div class="input-section-group">
+    <div class="input-section email">
+      <h2 class="title">EMAIL</h2>
+      <input class="input" placeholder="이메일을 입력해주세요." [(ngModel)]="userEmail">
+    </div>
+    <div class="input-section password">
+      <h2 class="title">PASSWORD</h2>
+      <input class="input" type="password" placeholder="패스워드를 입력해주세요." [(ngModel)]="userSecret">
+    </div>
+    <button ion-button class="auth-submit-btn" color="dark" (click)="requestSignIn()">로그인</button>
+  </div>
+</ion-content>

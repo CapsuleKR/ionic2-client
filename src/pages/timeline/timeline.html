@@ -1,0 +1,72 @@
+<!--
+  Generated template for the Timeline page.
+
+  See http://ionicframework.com/docs/v2/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>타임라인</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content>
+ <ion-refresher padding="10" (ionRefresh)="doRefresh($event)">
+    <ion-refresher-content
+      pullingIcon="arrow-dropdown"
+      pullingText="Pull to refresh"
+      refreshingText="Refreshing...">
+    </ion-refresher-content>
+  </ion-refresher>
+  <ion-card *ngFor="let timeline of timelines">
+    <ion-item>
+      <ion-avatar item-left>
+        <img src="https://avatars3.githubusercontent.com/u/3799158?v=3&s=460">
+      </ion-avatar>
+      <h3 style="font-weight:bold; margin-bottom: 0;">{{timeline.title}}</h3>
+      <p>{{timeline.created_at}}</p>
+    </ion-item>
+
+    <img src="http://magic.wizards.com/sites/mtg/files/images/featured/GP_HongKong.jpg">
+
+    <ion-card-content>
+      <p>{{timeline.content}}</p>
+    </ion-card-content>
+
+    <ion-row>
+      <ion-col width-33 center text-center>
+        <button ion-button icon-left clear small>
+          <ion-icon name="thumbs-up"></ion-icon>
+          <div>12 Likes</div>
+        </button>
+      </ion-col>
+      <ion-col width-33 center text-center>
+        <button ion-button icon-left clear small color="text-light">
+          <ion-icon name="text"></ion-icon>
+          <div>4 Comments</div>
+        </button>
+      </ion-col>
+      <ion-col width-33 center text-center>
+        <button ion-button icon-left clear small color="text-light">
+          <ion-icon name="text"></ion-icon>
+          <div>2 Shared</div>
+        </button>
+      </ion-col>
+      <!--<ion-col center text-center>-->
+        <!--<ion-note>-->
+          <!--11h ago-->
+        <!--</ion-note>-->
+      <!--</ion-col>-->
+    </ion-row>
+  </ion-card>
+  <ion-fab right bottom (click)="showWritePage()">
+    <button ion-fab color="primary"><ion-icon name="add"></ion-icon></button>
+  </ion-fab>
+<ion-infinite-scroll (ionInfinite)="doInfinite($event)">
+   <ion-infinite-scroll-content
+   loadingText="Loading more data...">></ion-infinite-scroll-content>
+ </ion-infinite-scroll>
+</ion-content>

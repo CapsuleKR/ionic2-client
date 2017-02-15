@@ -1,0 +1,43 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      설정
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+  <ion-list margin-bottom="0">
+    <ion-item>
+      <ion-thumbnail item-left>
+        <img src="https://avatars3.githubusercontent.com/u/3799158?v=3&s=460">
+      </ion-thumbnail>
+      <h2>Jade Yeom</h2>
+      <p>Hayao Miyazaki • 1988</p>
+      <button ion-button clear item-right (click)="viewMyPage()">마이페이지</button>
+    </ion-item>
+  </ion-list>
+  <ion-list margin-bottom="0">
+    <button ion-item>
+    <ion-icon name="logo-facebook" item-left></ion-icon>
+      Facebook으로 연결하기
+    </button>
+    <button ion-item>
+    <ion-icon name="logo-whatsapp" item-left></ion-icon>
+      WhatsApp으로 연결하기
+    </button>
+    <button ion-item>
+    <ion-icon name="logo-twitter" item-left></ion-icon>
+      Twiiter로 연결하기
+    </button>
+  </ion-list>
+  <ion-list margin-bottom="0">
+    <ion-item>
+      <ion-label>알림</ion-label>
+      <ion-toggle checked="false"></ion-toggle>
+    </ion-item>
+    <button ion-item>
+      푸시 알림 관리
+    </button>
+  </ion-list>
+</ion-content>

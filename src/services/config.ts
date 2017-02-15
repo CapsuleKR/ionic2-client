@@ -1,0 +1,1 @@
+export let SERVER_URL = "http://yeom.me:5000/api/v1";

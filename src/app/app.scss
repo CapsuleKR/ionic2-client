@@ -1,0 +1,102 @@
+// http://ionicframework.com/docs/v2/theming/
+
+
+// App Global Sass
+// --------------------------------------------------
+// Put style rules here that you want to apply globally. These
+// styles are for the entire app and not just one component.
+// Additionally, this file can be also used as an entry point
+// to import other Sass files to be included in the output CSS.
+//
+// Shared Sass variables, which can be used to adjust Ionic's
+// default Sass variables, belong in "theme/variables.scss".
+//
+// To declare rules for a specific mode, create a child rule
+// for the .md, .ios, or .wp mode classes. The mode class is
+// automatically applied to the <body> element in the app.
+
+$navbar-ios-height: 55px;
+
+.toolbar {
+  &.toolbar-ios {
+    height: 55px;
+  }
+  .toolbar-background {
+    background-color: white;
+  }
+}
+
+.scroll-content{
+  background-color: #fafafa;
+}
+
+.tabbar.show-tabbar{
+  background-color: white;
+ // border-top:1px solid #e0e0e0;
+}
+
+.segment-ios .segment-button {
+  border: none;
+  color: rgba(0,0,0,0.4);
+}
+
+.segment-ios {
+  padding: 0 !important;
+}
+
+.toolbar-background.toolbar-background-ios:last-child{
+  border-bottom: 1px solid #e0e0e0 !important;
+}
+
+.segment-ios .segment-button.segment-activated {
+  color: #34d6ce;
+  font-weight: bold;
+  background-color: transparent;
+  opacity: 1;
+  transition: 100ms all linear;
+  border-bottom: 2px solid #34d6ce ;
+}
+
+.segment-ios{
+  .segment-button{
+    line-height: 13px;
+    font-size: 14px;
+    position: relative;
+    height: 3rem;
+    top: 10px;
+    &:last-of-type, &:first-of-type {
+      margin-right: 0;
+      border-radius: 0;
+    }
+  }
+}
+
+.scroll-content{
+  border-top: none !important;
+}
+
+.fixed-content{
+  background-color: #fafafa !important;
+}
+ion-refresher.refresher-active {
+  background-color: #fafafa !important;
+}
+
+.refresher-pulling-text, .refresher-refreshing-text{
+  color: rgba(0,0,0,0.3);
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 11px;
+}
+.refresher-pulling-icon, .refresher-refreshing-icon {
+  color: rgba(0,0,0,0.3);
+}
+
+.toolbar-background-ios:not(:first-child){
+  background: white;
+  border-bottom: 1px solid #e0e0e0 !important;
+}
+
+.toolbar-ios .segment-ios {
+    top: 3px;
+}

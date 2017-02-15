@@ -1,0 +1,31 @@
+<!--
+  Generated template for the Auth page.
+
+  See http://ionicframework.com/docs/v2/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<link href="https://fonts.googleapis.com/css?family=Raleway:900" rel="stylesheet">
+
+
+<ion-content>
+  <div class="auth-main-page">
+    <div class="auth-main-page-wrapper">
+      <img class="main-logo" src="../assets/images/primary-logo-white.png">
+      <p class="service-description">추억을 캡슐에 담아요.</p>
+      <div class="bottom-section">
+        <span class="title-one">OUR MEMORIES</span>
+        <span class="title-two">PUT IN CAPSULE.</span>
+        <ion-grid>
+          <ion-row>
+            <ion-col width-50>
+              <button class="auth-btn signin" (click)="loadSignInPage()">로그인</button>
+            </ion-col>
+            <ion-col width-50>
+              <button class="auth-btn signup" (click)="loadSignUpPage()">회원가입</button>
+            </ion-col>
+          </ion-row>
+        </ion-grid>
+      </div>
+    </div>
+  </div>
+</ion-content>

@@ -1,0 +1,41 @@
+!--
+  Generated template for the ChooseFriends page.
+
+  See http://ionicframework.com/docs/v2/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-buttons start>
+    <button ion-button icon-only color="dark" (click)="closePage()">
+    <ion-icon name="close"></ion-icon>
+    </button>
+    </ion-buttons>
+    <ion-buttons end>
+      <button ion-button (click)="doneSelectPage()">
+        완료
+      </button>
+    </ion-buttons>
+    <ion-title>친구 선택하기</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content>
+  <ion-list>
+    <ion-list-header>
+      주변 친구 찾기
+    </ion-list-header>
+    <ion-item *ngFor="let user of users">
+      <ion-label tappable>{{user.name}}
+      </ion-label>
+      <ion-avatar item-left>
+        <img src="../assets/images/default_user.png">
+      </ion-avatar>
+      <ion-checkbox item-right [(ngModel)]="user.checked">
+      </ion-checkbox>
+    </ion-item>
+  </ion-list>
+</ion-content>

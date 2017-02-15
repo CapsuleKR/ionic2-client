@@ -1,0 +1,50 @@
+<div class="ion-diagnostic">
+<div class="ion-diagnostic-masthead" title="typescript error: 2339">
+<div class="ion-diagnostic-title">Typescript Error</div>
+<div class="ion-diagnostic-message" data-error-code="typescript-2339">Property &#039;getAllUser&#039; does not exist on type &#039;AuthService&#039;.</div>
+</div>
+<div class="ion-diagnostic-file">
+<div class="ion-diagnostic-file-header" title="/Users/jade/Workspace/Capsule-ionic/src/pages/choose-friends/choose-friends.ts">src/pages/choose-friends/choose-friends.ts</div>
+<div class="ion-diagnostic-blob">
+<table class="ion-diagnostic-table">
+<tr>
+<td class="ion-diagnostic-blob-num" data-line-number="20"></td>
+<td class="ion-diagnostic-blob-code"><span class="hljs-keyword">constructor</span>(public navCtrl: NavController, public navParams: NavParams, public storage: Storage, public authService: AuthService, public viewCtrl: ViewController) {</td>
+</tr>
+<tr class="ion-diagnostic-error-line">
+<td class="ion-diagnostic-blob-num" data-line-number="21"></td>
+<td class="ion-diagnostic-blob-code">  authService.<span class="ion-diagnostics-error-chr">g</span><span class="ion-diagnostics-error-chr">e</span><span class="ion-diagnostics-error-chr">t</span><span class="ion-diagnostics-error-chr">A</span><span class="ion-diagnostics-error-chr">l</span><span class="ion-diagnostics-error-chr">l</span><span class="ion-diagnostics-error-chr">U</span><span class="ion-diagnostics-error-chr">s</span><span class="ion-diagnostics-error-chr">e</span><span class="ion-diagnostics-error-chr">r</span>(<span class="hljs-keyword">this</span>.storage.get(<span class="hljs-string">'userToken'</span>).toString()).subscribe(res =&gt; {</td>
+</tr>
+<tr>
+<td class="ion-diagnostic-blob-num" data-line-number="22"></td>
+<td class="ion-diagnostic-blob-code">    <span class="hljs-keyword">this</span>.users = res.data;</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div class="ion-diagnostic">
+<div class="ion-diagnostic-masthead" title="typescript error: 2339">
+<div class="ion-diagnostic-title">Typescript Error</div>
+<div class="ion-diagnostic-message" data-error-code="typescript-2339">Property &#039;signUp&#039; does not exist on type &#039;AuthService&#039;.</div>
+</div>
+<div class="ion-diagnostic-file">
+<div class="ion-diagnostic-file-header" title="/Users/jade/Workspace/Capsule-ionic/src/pages/signup/signup.ts">src/pages/signup/signup.ts</div>
+<div class="ion-diagnostic-blob">
+<table class="ion-diagnostic-table">
+<tr>
+<td class="ion-diagnostic-blob-num" data-line-number="32"></td>
+<td class="ion-diagnostic-blob-code">requestSignUp() {</td>
+</tr>
+<tr class="ion-diagnostic-error-line">
+<td class="ion-diagnostic-blob-num" data-line-number="33"></td>
+<td class="ion-diagnostic-blob-code">  <span class="hljs-keyword">this</span>.authService.<span class="ion-diagnostics-error-chr">s</span><span class="ion-diagnostics-error-chr">i</span><span class="ion-diagnostics-error-chr">g</span><span class="ion-diagnostics-error-chr">n</span><span class="ion-diagnostics-error-chr">U</span><span class="ion-diagnostics-error-chr">p</span>(<span class="hljs-keyword">this</span>.userEmail, <span class="hljs-keyword">this</span>.userName, <span class="hljs-keyword">this</span>.userSecret).subscribe(res =&gt; {</td>
+</tr>
+<tr>
+<td class="ion-diagnostic-blob-num" data-line-number="34"></td>
+<td class="ion-diagnostic-blob-code">    <span class="hljs-built_in">console</span>.log(res);</td>
+</tr>
+</table>
+</div>
+</div>
+</div>

@@ -1,0 +1,24 @@
+
+
+<ion-header>
+  <ion-navbar>
+    <ion-title><img class="logo" src="../assets/images/primary-logo.png"></ion-title>
+
+    <ion-buttons start>
+      <button ion-button icon-only color="dark">
+        <ion-icon name="locate"></ion-icon>
+      </button>
+    </ion-buttons>
+
+    <ion-buttons end>
+      <button ion-button icon-only (click)="loadNewCapsulePage()">
+        <ion-icon name="add"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+   <div #map id="map"></div>
+</ion-content>
+

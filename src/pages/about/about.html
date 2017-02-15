@@ -1,0 +1,40 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      활동로그
+    </ion-title>
+  </ion-navbar>
+  <ion-toolbar no-border-top class="nav-toolbar">
+    <ion-segment [(ngModel)]="navActive">
+      <ion-segment-button value="best" >
+        내 주변 알림
+      </ion-segment-button>
+      <ion-segment-button value="plas">
+        내 알림
+      </ion-segment-button>
+    </ion-segment>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-refresher padding="10" (ionRefresh)="doRefresh($event)">
+    <ion-refresher-content
+      pullingIcon="arrow-dropdown"
+      pullingText="Pull to refresh"
+      refreshingText="Refreshing...">
+    </ion-refresher-content>
+  </ion-refresher>
+  <ion-list>
+    <ion-item *ngFor="let activity of activities">
+      <ion-avatar item-left>
+        <img src="https://avatars3.githubusercontent.com/u/3799158?v=3&s=460">
+      </ion-avatar>
+      <h3 style="font-weight:bold; margin-bottom: 0;">Jade Yeom</h3>
+      <p>{{activity.content}}</p>
+      <button ion-button clear item-right>보기</button>
+    </ion-item>
+  </ion-list>
+<ion-infinite-scroll (ionInfinite)="doInfinite($event)">
+  <ion-infinite-scroll-content loadingText="Loading more data..."></ion-infinite-scroll-content>
+</ion-infinite-scroll>
+</ion-content>

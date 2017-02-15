@@ -1,0 +1,30 @@
+page-signin {
+    background-color: white;
+.main-logo{
+
+    height: 75px;
+    margin: auto;
+    display: block;
+}
+.input-section-group{
+    margin-top: 20px;
+}
+.input-section{
+    margin-bottom: 10px;
+    .title{
+        color: #607d8b;
+        font-size: 14px;
+        font-weight : bold;
+        font-family: 'Raleway', sans-serif;
+        letter-spacing: 10px
+    }
+    input{
+    padding: 11px 12px;
+    width: 100%;
+    border:  1px solid #e0e0e0;
+    }
+}
+.auth-submit-btn{
+    width: 100%;
+}
+}

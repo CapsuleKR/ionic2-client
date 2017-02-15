@@ -1,0 +1,72 @@
+<!--
+  Generated template for the NewCapsule page.
+
+  See http://ionicframework.com/docs/v2/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+  <ion-navbar>
+    <ion-buttons start>
+      <button ion-button icon-only color="dark" (click)="closePage()">
+        <ion-icon name="close"></ion-icon>
+      </button>
+    </ion-buttons>
+    <ion-buttons end>
+      <button ion-button (click)="addNewCapsule()">
+        완료
+      </button>
+    </ion-buttons>
+    <ion-title>캡슐 추가</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content>
+  <ion-list no-border>
+
+    <ion-list-header>
+      위치 설정
+    </ion-list-header>
+
+    <ion-item pad>
+      <div #map id="map"></div>
+    </ion-item>
+  </ion-list>
+
+  <ion-list no-border>
+    <ion-list-header>
+      캡슐 내용
+    </ion-list-header>
+    <ion-item>
+      <ion-input type="text" placeholder="캡슐 이름" [(ngModel)]="title"></ion-input>
+    </ion-item>
+    <ion-item>
+      <textarea class="content-area" ion-input type="text" placeholder="캡슐에 대한 내용" [(ngModel)]="content"></textarea>
+    </ion-item>
+    <button ion-item (click)="loadChooseSchoolPage()">학교 선택</button>
+    <ion-item *ngFor="let school of schoolList">
+      <ion-avatar item-left>
+        <img src="../assets/images/default_user.png">
+      </ion-avatar>
+      <h2>{{school.name}}</h2>
+      <h3>{{school.address}}</h3>
+      <p>{{school.link}}</p>
+    </ion-item>
+  </ion-list>
+  <ion-list no-border>
+    <ion-list-header>
+      친구 선택
+    </ion-list-header>
+    <button ion-item (click)="loadChooseFriendsPage()">캡슐에 넣을 친구 선택..</button>
+    <ion-item *ngFor="let user of users">
+      <ion-avatar item-left>
+        <img src="../assets/images/default_user.png">
+      </ion-avatar>
+      <h2>{{user.name}}</h2>
+      <h3>{{user.email}}</h3>
+      <p>{{user.created_at}}</p>
+    </ion-item>
+  </ion-list>
+
+</ion-content>
